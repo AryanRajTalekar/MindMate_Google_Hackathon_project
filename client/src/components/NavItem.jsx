@@ -1,12 +1,13 @@
 import { NavLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 
-const NavItem = ({ label, route, scrollTo, className }) => {
+const NavItem = ({ label, route, scrollTo, className = "", onClick }) => {
   const isLoggedIn = !!localStorage.getItem("authToken");
 
   return isLoggedIn ? (
     <NavLink
       to={route}
+      onClick={onClick}
       className={({ isActive }) =>
         isActive
           ? `text-blue-400 border-b-2 border-blue-400 pb-1 ${className}`
@@ -21,6 +22,7 @@ const NavItem = ({ label, route, scrollTo, className }) => {
       smooth={true}
       duration={600}
       offset={-60}
+      onClick={onClick}
       className={`text-white hover:text-blue-400 text-xl cursor-pointer ${className}`}
     >
       {label}

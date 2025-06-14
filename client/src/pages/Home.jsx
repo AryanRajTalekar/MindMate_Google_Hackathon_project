@@ -22,7 +22,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="w-screen h-auto">
+    <div className="w-screen h-auto overflow-x-hidden">
       <Navbar />
 
       <section id="heroSection">
@@ -33,12 +33,22 @@ const Home = () => {
         <ChatbotSection />
       </section>
 
-      <section id="journalSection" className="h-screen bg-green-100 flex items-center justify-center">
-        <h2 className="text-4xl font-semibold">Journal Description (Landing)</h2>
+      <section
+        id="journalSection"
+        className="min-h-screen bg-green-100 flex items-center justify-center px-4 text-center"
+      >
+        <h2 className="text-3xl md:text-4xl font-semibold text-gray-800">
+          Journal Description (Landing)
+        </h2>
       </section>
 
-      <section id="resourcesSection" className="h-screen bg-yellow-100 flex items-center justify-center">
-        <h2 className="text-4xl font-semibold">Resources Description (Landing)</h2>
+      <section
+        id="resourcesSection"
+        className="min-h-screen bg-yellow-100 flex items-center justify-center px-4 text-center"
+      >
+        <h2 className="text-3xl md:text-4xl font-semibold text-gray-800">
+          Resources Description (Landing)
+        </h2>
       </section>
 
       <section id="emergencySection">
@@ -51,7 +61,7 @@ const Home = () => {
           smooth={true}
           duration={500}
           offset={-60}
-          className="fixed bottom-6 left-6 px-4 py-2 bg-white/30 hover:bg-white/50 text-white rounded-full backdrop-blur-md text-sm z-20 cursor-pointer"
+          className="fixed bottom-6 left-6 px-4 py-2 bg-blue-400 text-white hover:bg-blue-800 rounded-full text-sm shadow-lg transition-colors z-30 cursor-pointer"
         >
           Back to Top ⬆️
         </ScrollLink>
