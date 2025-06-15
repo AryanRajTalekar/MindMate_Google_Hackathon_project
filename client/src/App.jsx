@@ -7,16 +7,19 @@ import Login from "./pages/Login";
 import Chatbot from "./pages/Chatbot";
 import Journal from "./pages/Journal";
 import Resources from "./pages/Resources";
+import SOSButton from "./utils/SOSButton";
 
 const App = () => {
-  const isAuthenticated = localStorage.getItem("userLoggedIn") === "true";
-
+  // const isAuthenticated = localStorage.getItem("userLoggedIn") === "true";
+    const isAuthenticated = true;
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/helplines" element={<Helplines />} />
         <Route path="/login" element={<Login />} />
+
+        {/* Protected Routes */}
         <Route
           path="/journal"
           element={
@@ -34,12 +37,21 @@ const App = () => {
           }
         />
 
-        {/* Protected Routes */}
+        
         <Route
           path="/chatbot"
           element={
             <ProtectedRoute isAuthenticated={isAuthenticated}>
               <Chatbot />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/sos"
+          element={
+            <ProtectedRoute isAuthenticated={isAuthenticated}>
+              <SOSButton />
             </ProtectedRoute>
           }
         />

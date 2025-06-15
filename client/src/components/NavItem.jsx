@@ -2,8 +2,8 @@ import { NavLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 
 const NavItem = ({ label, route, scrollTo, className = "", onClick }) => {
-  const isLoggedIn = !!localStorage.getItem("authToken");
-
+  // const isLoggedIn = !!localStorage.getItem("authToken");
+const isLoggedIn = false;
   return isLoggedIn ? (
     <NavLink
       to={route}

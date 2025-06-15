@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import ChatbotSection from "../components/ChatbotSection";
 import HelplineSection from "../components/HelplineSection";
+import SOSSection from "../components/SOSSection";
 
 const Home = () => {
   const [showButton, setShowButton] = useState(false);
@@ -31,6 +32,10 @@ const Home = () => {
 
       <section id="chatbotSection">
         <ChatbotSection />
+      </section>
+
+      <section id="sosPageSection">
+        <SOSSection />
       </section>
 
       <section

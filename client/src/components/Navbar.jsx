@@ -15,6 +15,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar";
 import { Link as ScrollLink } from "react-scroll";
 import { Menu } from "lucide-react"; // You can install `lucide-react` or use any icon set
 import { X } from "lucide-react";
+import SOSButton from "../utils/SOSButton";
+
 
 const Navbar = () => {
   const { toggleTheme } = useTheme();
@@ -94,6 +96,12 @@ const Navbar = () => {
               scrollTo="emergencySection"
               route="/helplines"
             />
+            <NavItem
+              label="SOS"
+              scrollTo="SOSSection"
+              route="/sos"
+            />
+
 
             {/* Avatar Dropdown */}
             <DropdownMenu>

@@ -47,7 +47,7 @@ const HeroSection = () => {
 
   return (
     <div className="relative w-full h-screen overflow-hidden" id="heroSection">
-      {videoSrc && (
+      {/* {videoSrc && (
         <video
           src={videoSrc}
           autoPlay
@@ -56,7 +56,7 @@ const HeroSection = () => {
           playsInline
           className="absolute top-0 left-0 w-full h-full object-cover z-0 transition-opacity duration-1000 opacity-100"
         />
-      )}
+      )} */}
 
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-black/40 px-4 text-center">
         {showWelcome && (
